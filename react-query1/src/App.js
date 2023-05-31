@@ -1,13 +1,17 @@
-import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query-devtools';
+// import { ReactQueryDevtools } from 'react-query-devtools';
 import { Repositories } from './Repositories';
+
+const queryClient = new QueryClient({});
 
 function App() {
   return (
-    <QueryClientProvider client={QueryClient}>
+    <QueryClientProvider client={queryClient}>
+
       <Repositories />
-      <ReactQueryDevtools initialIsOpen={true} />
+
+      {/* <ReactQueryDevtools initialIsOpen={true} /> */}
+
     </QueryClientProvider>
     
   );

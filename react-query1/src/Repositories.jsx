@@ -1,8 +1,8 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export let Repositories = () => {
+export const Repositories = () => {
   const { isLoading, isError, data, error, refetch } = useQuery(["repo"], () =>
     axios
       .get("https://api.github.com/users/eunit99/repos")
